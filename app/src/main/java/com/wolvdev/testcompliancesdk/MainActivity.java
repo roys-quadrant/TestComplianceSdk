@@ -87,19 +87,19 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(ConsentResult consentResult) {
                 switch (consentResult){
                     case ccpaAccept:
-                        //function for CCPA accept button clicked
+                        //CCPA accept button clicked
                         break;
                     case ccpaDecline:
-                        //function for CCPA decline button clicked
+                        //CCPA decline button clicked
                         break;
                     case gdprAccept:
-                        //function for GDPR accept button clicked
+                        //GDPR accept button clicked
                         break;
                     case gdprDecline:
-                        //function for GDPR decline button clicked
+                        //GDPR decline button clicked
                         break;
                     case notConsent:
-                        //function for Not consent button clicked
+                        //user location no need for consent
                         break;
                 }
             }
@@ -116,17 +116,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PermissionUtil.PERMISSION_ACCESS_LOCATION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                compliance.openConsentFormIfNeeded(this, getSupportFragmentManager(), new Compliance.ConsentCallback() {
-                    @Override
-                    public void onSuccess(ConsentResult consentResult) {
-                        Log.d("MainActivity", consentResult.toString());
-                    }
-
-                    @Override
-                    public void onError(String result) {
-                        Log.d("MainActivity",result);
-                    }
-                });
+                openConsentForm();
             } else {
                 Toast.makeText(this, "Location permission denied", Toast.LENGTH_LONG).show();
             }
