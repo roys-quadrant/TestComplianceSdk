@@ -12,14 +12,6 @@
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_marginTop="36dp"
-            android:src="@drawable/quadrant_logo" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
