@@ -26,7 +26,7 @@ defaultConfig {
     }
 dependencies {
     ....
-    implementation 'implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.21'
+    implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.21'
     implementation "androidx.multidex:multidex:2.0.1"
 }
 ```
