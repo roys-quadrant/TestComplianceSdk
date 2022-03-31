@@ -1,6 +1,6 @@
 # CMP SDK example
 ## implementation example
-### latest version 1.0.21
+### latest version 1.0.22
 
 
 setting.gradle or build.gradle(project level) file
