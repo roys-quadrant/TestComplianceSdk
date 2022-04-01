@@ -1,6 +1,6 @@
 # CMP SDK example
 ## implementation example
-### latest version 1.0.19
+### latest version 1.0.22
 
 
 setting.gradle or build.gradle(project level) file
@@ -26,7 +26,7 @@ defaultConfig {
     }
 dependencies {
     ....
-    implementation 'io.quadrant.sdk.locationdata:data-acquisition-sdk:1.0.19'
+    implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.21'
     implementation "androidx.multidex:multidex:2.0.1"
 }
 ```
@@ -266,4 +266,44 @@ val consentValue = compliance.getConsentValue(this);
 if you want enable proguard in your release app, add this to your proguard rules file
 ```sh
 -keep class com.quadrant.sdk.compliance.** {*;}
+```
+
+-----------------------------------------------------------------------
+
+## Non-Transitive
+### latest version 1.0.0
+On some special case, when your gradle library clash with ours regarding version issues, please use our non-transitive SDK.
+The different is on on build.gradle on app level. The rest is similar with the above.
+
+build.gradle(app level)
+```sh
+defaultConfig {
+        ....
+        multiDexEnabled true
+
+        ....
+    }
+dependencies {
+    ....
+    //THIS OUR SDK LIBRARY
+    implementation 'io.quadrant.sdk.compliance:compliancesdk-non-transitive:1.0.0'
+    
+    //THIS LIBRARY NEEDED BY OUR SDK.
+    //Please replace library version number(x.x.x) with your need
+    implementation "androidx.multidex:multidex:x.x.x"
+    implementation 'com.facebook.shimmer:shimmer:x.x.x'
+    implementation 'com.google.android.gms:play-services-ads-identifier:x.x.x'
+    implementation 'com.iabtcf:iabtcf-encoder:x.x.x'
+    implementation 'com.iabtcf:iabtcf-decoder:x.x.x'
+    implementation 'io.jsonwebtoken:jjwt:x.x.x'
+    implementation 'com.squareup.retrofit2:retrofit:x.x.x'
+    implementation 'com.squareup.retrofit2:converter-gson:x.x.x'
+    implementation 'com.google.android.gms:play-services-safetynet:x.x.x'
+    implementation 'androidx.lifecycle:lifecycle-extensions:x.x.x'
+    implementation 'com.google.android.gms:play-services-location:x.x.x'
+    implementation 'com.google.code.gson:gson:x.x.x'
+    implementation 'com.squareup.okhttp3:okhttp:x.x.x'
+    implementation 'com.squareup.okhttp3:logging-interceptor:x.x.x'
+    
+}
 ```
