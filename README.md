@@ -26,7 +26,7 @@ defaultConfig {
     }
 dependencies {
     ....
-    implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.21'
+    implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.23'
     implementation "androidx.multidex:multidex:2.0.1"
 }
 ```
@@ -286,7 +286,7 @@ defaultConfig {
 dependencies {
     ....
     //THIS OUR SDK LIBRARY
-    implementation 'io.quadrant.sdk.compliance:compliancesdk-non-transitive:1.0.0'
+    implementation 'io.quadrant.sdk.compliance:compliancesdk-non-transitive:1.0.1'
     
     //THIS LIBRARY NEEDED BY OUR SDK.
     //Please replace library version number(x.x.x) with your need
