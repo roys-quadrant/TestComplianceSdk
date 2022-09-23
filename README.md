@@ -1,6 +1,6 @@
 # CMP SDK example
 ## implementation example
-### latest version 1.0.22
+### latest version 1.0.23
 
 
 setting.gradle or build.gradle(project level) file
@@ -37,7 +37,7 @@ dependencies {
 
 implement instance
 ```sh
-Compliance compliance = Compliance.getInstance("YOUR KEY");
+Compliance compliance = Compliance.getInstance("YOUR KEY", this);
 ```
 
 implement open consent form if needed.
@@ -147,7 +147,7 @@ String consentValue = compliance.getConsentValue(MainActivity.this);
 #### kotlin
 implement instance
 ```sh
-Compliance compliance = Compliance.getInstance("YOUR KEY");
+val compliance = Compliance.getInstance("YOUR KEY", this)
 ```
 
 implement open consent form if needed.
@@ -271,7 +271,7 @@ if you want enable proguard in your release app, add this to your proguard rules
 -----------------------------------------------------------------------
 
 ## Non-Transitive
-### latest version 1.0.0
+### latest version 1.0.1
 On some special case, when your gradle library clash with ours regarding version issues, please use our non-transitive SDK.
 The different is on on build.gradle on app level. The rest is similar with the above.
 
