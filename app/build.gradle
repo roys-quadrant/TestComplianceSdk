@@ -38,11 +38,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //Transitive
-    implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.22'
+    //implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.23'
     implementation "androidx.multidex:multidex:2.0.1"
 
     //Non-Transitive
-    implementation 'io.quadrant.sdk.compliance:compliancesdk-non-transitive:1.0.0'
+    implementation 'io.quadrant.sdk.compliance:compliancesdk-non-transitive:1.0.1'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
     implementation 'com.iabtcf:iabtcf-encoder:2.0.8'

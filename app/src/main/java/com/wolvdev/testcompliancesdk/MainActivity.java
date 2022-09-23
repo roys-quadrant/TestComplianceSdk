@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        compliance = Compliance.getInstance("YOUR KEY");
+        compliance = Compliance.getInstance("YOUR KEY", this);
         if(PermissionUtil.accessLocation(this)){
             openConsentForm();
         }
