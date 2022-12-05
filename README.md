@@ -1,6 +1,6 @@
 # CMP SDK example
 ## implementation example
-### latest version 1.0.24
+### latest version 1.0.25
 
 
 setting.gradle or build.gradle(project level) file
@@ -26,7 +26,7 @@ defaultConfig {
     }
 dependencies {
     ....
-    implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.24'
+    implementation 'io.quadrant.sdk.compliance:compliancesdk:1.0.25'
     implementation "androidx.multidex:multidex:2.0.1"
 }
 ```
@@ -271,7 +271,7 @@ if you want enable proguard in your release app, add this to your proguard rules
 -----------------------------------------------------------------------
 
 ## Non-Transitive
-### latest version 1.0.2
+### latest version 1.0.3
 On some special case, when your gradle library clash with ours regarding version issues, please use our non-transitive SDK.
 The different is on on build.gradle on app level. The rest is similar with the above.
 
@@ -286,7 +286,7 @@ defaultConfig {
 dependencies {
     ....
     //THIS OUR SDK LIBRARY
-    implementation 'io.quadrant.sdk.compliance:compliancesdk-non-transitive:1.0.2'
+    implementation 'io.quadrant.sdk.compliance:compliancesdk-non-transitive:1.0.3'
     
     //THIS LIBRARY NEEDED BY OUR SDK.
     //Please replace library version number(x.x.x) with your need
@@ -295,7 +295,9 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads-identifier:x.x.x'
     implementation 'com.iabtcf:iabtcf-encoder:x.x.x'
     implementation 'com.iabtcf:iabtcf-decoder:x.x.x'
-    implementation 'io.jsonwebtoken:jjwt:x.x.x'
+    implementation 'io.jsonwebtoken:jjwt-api:x.x.x'
+    implementation 'io.jsonwebtoken:jjwt-impl:x.x.x'
+    implementation 'io.jsonwebtoken:jjwt-jackson:x.x.x'
     implementation 'com.squareup.retrofit2:retrofit:x.x.x'
     implementation 'com.squareup.retrofit2:converter-gson:x.x.x'
     implementation 'com.google.android.gms:play-services-safetynet:x.x.x'
